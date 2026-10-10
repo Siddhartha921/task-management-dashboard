@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>TaskFlow</h1>
+            <p>Task Management Dashboard</p>
+        </header>
+
+        <section class="task-form-section">
+
+            <h2>Add Task</h2>
+
+            <form id="task-form">
+
+                <input
+                    type="text"
+                    id="task-title"
+                    placeholder="Task title"
+                >
+
+                <textarea
+                    id="task-description"
+                    placeholder="Task description"
+                ></textarea>
+
+                <select id="task-priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <select id="task-category">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Study">Study</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input
+                    type="date"
+                    id="task-due-date"
+                >
+
+                <select id="task-status">
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <button type="submit" id="submit-button">
+                    Add Task
+                </button>
+
+                <button type="button" id="cancel-button" hidden>
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="dashboard">
+
+            <h2>Dashboard</h2>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <h3>Total Tasks</h3>
+                    <p id="total-tasks">0</p>
+                </div>
+
+                <div class="stat">
+                    <h3>Pending</h3>
+                    <p id="pending-tasks">0</p>
+                </div>
+
+                <div class="stat">
+                    <h3>In Progress</h3>
+                    <p id="progress-tasks">0</p>
+                </div>
+
+                <div class="stat">
+                    <h3>Completed</h3>
+                    <p id="completed-tasks">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="controls">
+
+            <h2>Tasks</h2>
+
+            <input
+                type="text"
+                id="search-tasks"
+                placeholder="Search tasks..."
+            >
+
+            <select id="filter-status">
+                <option value="All">All Statuses</option>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <select id="filter-priority">
+                <option value="All">All Priorities</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <select id="sort-tasks">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="priority">Highest Priority</option>
+                <option value="due-date">Due Date</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+
+            <button type="button" id="clear-all">
+                Clear All Tasks
+            </button>
+
+        </section>
+
+        <section class="task-list-section">
+
+            <div id="task-list"></div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

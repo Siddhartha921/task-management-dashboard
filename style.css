@@ -1,0 +1,190 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+    color: #666;
+}
+
+section {
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+textarea,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#cancel-button {
+    background: #777;
+}
+
+#clear-all {
+    margin-top: 5px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat {
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+.stat h3 {
+    margin-top: 0;
+}
+
+.stat p {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.task-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.task-item p {
+    margin: 8px 0;
+}
+
+.task-item button {
+    width: auto;
+    margin-right: 8px;
+    padding: 8px 14px;
+}
+
+.edit-btn {
+    background: #444;
+}
+
+.delete-btn {
+    background: #777;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.due-date {
+    font-weight: bold;
+}
+
+.overdue {
+    color: #b00020;
+}
+
+.due-today {
+    color: #b36b00;
+}
+
+.upcoming {
+    color: #006400;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
